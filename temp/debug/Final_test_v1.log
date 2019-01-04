@@ -1,0 +1,17 @@
+﻿已經開始建置於 2019/1/4 下午 02:01:08。
+     1>節點 2 (Build 目標) 上的專案 "C:\Users\angel\Downloads\Final_test_v1-20190104T045608Z-001\Final_test_v1\Final_test_v1\Final_test_v1\Final_test_v1.vcxproj"。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(356,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\學校相關\C_Final project\Final_test_v1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\..\temp\debug\\" /Fd"..\..\temp\debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\source\main.c
+         main.c
+     1>c:\users\angel\downloads\final_test_v1-20190104t045608z-001\final_test_v1\source\main.c(42): warning C4133: '函式' : 不相容的類型 - 從 'Acct [3]' 至 'Acct *'
+     1>c:\users\angel\downloads\final_test_v1-20190104t045608z-001\final_test_v1\source\main.c(55): warning C4028: 型式參數 3 與來自宣告的不同
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\temp\debug\Final_test_v1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\..\temp\debug\Final_test_v1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\temp\debug\Final_test_v1.lib" /MACHINE:X86 ..\..\temp\debug\main.obj
+         Final_test_v1.vcxproj -> C:\Users\angel\Downloads\Final_test_v1-20190104T045608Z-001\Final_test_v1\Final_test_v1\Final_test_v1\..\..\temp\debug\Final_test_v1.exe
+     1>專案 "C:\Users\angel\Downloads\Final_test_v1-20190104T045608Z-001\Final_test_v1\Final_test_v1\Final_test_v1\Final_test_v1.vcxproj" (Build 目標) 建置完成。
+
+建置成功。
+
+經過時間 00:00:01.01
