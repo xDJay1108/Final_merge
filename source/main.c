@@ -5,6 +5,7 @@
 #define Acct_Data 3	//定義能記錄、查詢幾筆資料的最大值，
 					//為了Demo方便，這邊先設定為3
 void Accounting(int *, int*, struct Acct[]);	//記帳副程式
+void Feeding(int*, int*);						//餵食功能副程式
 
 typedef struct _Accounting//記帳 一筆資料的結構
 {
@@ -35,6 +36,9 @@ int main()
 
 		switch (select)
 		{
+		case 1:
+			Feeding(&lv, &ex);						//等級1開放功能──選項1餵食
+			break;
 		case 2:
 			if (lv < 2)
 				printf("還未開放此功能!!\n\n");
@@ -124,4 +128,51 @@ void Accounting(int *money, int *i, Acct myAcct[Acct_Data])	//記帳副程式
 		printf("\n");
 	} while (select != 0);	//不等於0就繼續記帳
 	return;	//回到主選單
+}
+
+void Feeding(int *lv, int *ex)//餵食功能的副程式
+{
+	int select;
+	int lim = 5;//最高等級是五
+	while (1)
+	{
+		printf("正在進行餵食功能\n\n目前石虎喵喵的狀態:LV:%d", *lv);
+		for (int i = 1; i <= *ex; i++) //每餵食一次增加一點經驗值
+		{
+			printf("-");
+		}
+		printf("\n");
+		printf("請選擇要餵食的食物:\n(1)炸雞 or (2)啤酒 or (3)退出       ");
+		scanf_s("%d", &select);
+		printf("\n");
+		if (*lv == lim)
+		{
+			printf("已達等級上限\n");
+			return;
+		}
+		else if (*lv < lim)//等級小於最高等，繼續增加一點經驗值
+		{
+			switch (select)
+			{
+			case 1:
+				printf("已選擇 炸雞 增加1點經驗值\n===================================\n");
+				*ex = *ex + 1;
+				break;
+			case 2:
+				printf("已選擇 啤酒 增加1點經驗值\n===================================\n");
+				*ex = *ex + 1;
+				break;
+			case 3:
+				printf("已退出\n");
+				return;
+				break;
+			}
+			if (*ex % 10 == 0)//每十點經驗值，上升一等
+			{
+				*lv = *lv + 1;
+				*ex = 0;
+			}
+		}
+
+	}
 }
